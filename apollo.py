@@ -20,7 +20,7 @@ def main():
     # Compile url from argument and static part
     try:
         query_url = 'https://www.apollo.ee/catalogsearch/advanced/result/?name=' + str(parsed_name)
-        print(query_url)
+        # print(query_url)
     except Exception as e:
         print(e)
         sys.exit(1)
