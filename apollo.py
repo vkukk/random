@@ -25,7 +25,11 @@ def main():
         print(e)
         sys.exit(1)
     # Get page
-    page = requests.get(query_url)
+    try:
+        page = requests.get(query_url, 10.0)
+    except Exception as e:
+        print(e)
+        sys.exit(1)
     # Parse with BeautifulSoup
     soup = BeautifulSoup(page.text, 'html.parser')
     # Get product page url from search result page by CSS class
