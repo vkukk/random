@@ -19,7 +19,7 @@ parsed_name = args.nimi.replace(' ', '+')
 def main():
     # Compile url from argument and static part
     try:
-        query_url = 'https://www.apollo.ee/catalogsearch/advanced/result/?name=' + str(parsed_name)
+        query_url = 'https://www.apollo.ee/catalogsearch/advanced/result/?name=' + str(parsed_name) + '&kategooria[]=181'
         # print(query_url)
     except Exception as e:
         print(e)
